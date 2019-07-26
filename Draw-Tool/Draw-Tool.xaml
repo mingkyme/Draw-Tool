@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Draw_Tool"
         xmlns:custom="clr-namespace:Draw_Tool.Custom"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Draw-Tool" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -23,7 +23,7 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <custom:CustomDrawTypeRadioButton Grid.Column="0" GroupName="DrawTool" Content="Draw" DrawType="Ink" Click="DrawTypeRadioButton_Click" IsChecked="True"/>
+            <custom:CustomDrawTypeRadioButton Grid.Column="0" GroupName="DrawTool" Content="Draw" DrawType="Ink" IsChecked="True" Click="DrawTypeRadioButton_Click"/>
             <custom:CustomDrawTypeRadioButton Grid.Column="1" GroupName="DrawTool" Content="eraser" DrawType="EraseByStroke" Click="DrawTypeRadioButton_Click"/>
             <custom:CustomColorRadioButton Grid.Column="2" GroupName="DrawColor" Content="검은색" Color="Black" Click="ColorRadioButton_Click" IsChecked="True"/>
             <custom:CustomColorRadioButton Grid.Column="3" GroupName="DrawColor" Content="빨강색" Color="Red" Click="ColorRadioButton_Click"/>

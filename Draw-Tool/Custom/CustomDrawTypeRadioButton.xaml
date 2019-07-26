@@ -1,0 +1,27 @@
+﻿<RadioButton x:Class="Draw_Tool.Custom.CustomDrawTypeRadioButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Draw_Tool.Custom"
+             mc:Ignorable="d" 
+             Loaded="RadioButton_Loaded"
+             d:DesignHeight="450" d:DesignWidth="800" >
+    <RadioButton.Template>
+        <ControlTemplate>
+            <Grid Margin="1">
+                <ToggleButton x:Name="XAML_Toggle" Background="#FEFEFE" BorderBrush="#101010" BorderThickness="1" IsChecked="{Binding IsChecked,RelativeSource={RelativeSource TemplatedParent}}">
+
+                </ToggleButton>
+                <Grid x:Name="XAML_Grid" Background="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Image x:Name="XAML_Image" Stretch="Uniform" Source="{Binding ImagePath,RelativeSource={RelativeSource TemplatedParent}}"/>
+                    <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding ButtonName,RelativeSource={RelativeSource TemplatedParent}}"/>
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+    </RadioButton.Template>
+</RadioButton>

@@ -26,7 +26,8 @@ namespace Draw_Tool
 
         private void DrawTypeRadioButton_Click(object sender, RoutedEventArgs e)
         {
-            XAML_Ink.EditingMode = (sender as Custom.CustomDrawTypeRadioButton).DrawType;
+            //(sender as Custom.CustomDrawTypeRadioButtonTest).ImagePath = new BitmapImage(new Uri("pack://siteoforigin:,,,/Resources/Pen.png"));
+           XAML_Ink.EditingMode = (sender as Custom.CustomDrawTypeRadioButton).DrawType;
         }
 
         private void ColorRadioButton_Click(object sender, RoutedEventArgs e)
@@ -46,6 +47,7 @@ namespace Draw_Tool
 
         private void OpenButton_Click(object sender, RoutedEventArgs e)
         {
+            
             try
             {
                 using (FileStream fs = new FileStream("inkstrokes.isf", FileMode.Open))
