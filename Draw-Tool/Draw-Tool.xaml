@@ -25,10 +25,10 @@
             </Grid.ColumnDefinitions>
             <custom:CustomDrawTypeRadioButton Grid.Column="0" GroupName="DrawTool" Content="Draw" DrawType="Ink" IsChecked="True" Click="DrawTypeRadioButton_Click"/>
             <custom:CustomDrawTypeRadioButton Grid.Column="1" GroupName="DrawTool" Content="eraser" DrawType="EraseByStroke" Click="DrawTypeRadioButton_Click"/>
-            <custom:CustomColorRadioButton Grid.Column="2" GroupName="DrawColor" Content="검은색" Color="Black" Click="ColorRadioButton_Click" IsChecked="True"/>
-            <custom:CustomColorRadioButton Grid.Column="3" GroupName="DrawColor" Content="빨강색" Color="Red" Click="ColorRadioButton_Click"/>
-            <custom:CustomColorRadioButton Grid.Column="4" GroupName="DrawColor" Content="파랑색" Color="Blue" Click="ColorRadioButton_Click"/>
-            <custom:CustomColorRadioButton Grid.Column="5" GroupName="DrawColor" Content="초록색" Color="Green" Click="ColorRadioButton_Click"/>
+            <custom:CustomColorRadioButton Grid.Column="2" GroupName="DrawColor" InkColor="Black" Click="ColorRadioButton_Click" IsChecked="True"/>
+            <custom:CustomColorRadioButton Grid.Column="3" GroupName="DrawColor" InkColor="Red" Click="ColorRadioButton_Click"/>
+            <custom:CustomColorRadioButton Grid.Column="4" GroupName="DrawColor" InkColor="Blue" Click="ColorRadioButton_Click"/>
+            <custom:CustomColorRadioButton Grid.Column="5" GroupName="DrawColor" InkColor="Green" Click="ColorRadioButton_Click"/>
             <Slider Minimum="1" Maximum="10" Value="1" Grid.Column="6" ValueChanged="Slider_ValueChanged"/>
         </Grid>
         <InkCanvas Name="XAML_Ink" Grid.Row="1"/>

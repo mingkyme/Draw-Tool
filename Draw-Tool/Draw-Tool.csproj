@@ -56,6 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Custom\CustomColorRadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Custom\CustomDrawTypeRadioButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -68,7 +72,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Custom\CustomColorRadioButton.cs" />
+    <Compile Include="Custom\CustomColorRadioButton.xaml.cs">
+      <DependentUpon>CustomColorRadioButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Custom\CustomDrawTypeRadioButton.xaml.cs">
       <DependentUpon>CustomDrawTypeRadioButton.xaml</DependentUpon>
     </Compile>

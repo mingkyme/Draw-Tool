@@ -84,7 +84,7 @@ namespace Draw_Tool.Custom
                 case InkCanvasEditingMode.EraseByStroke:
                     ImagePath = new BitmapImage(new Uri("pack://application:,,,/Resources/Eraser.png"));
                     ButtonName = "Eraser";
-                    break;       
+                    break;
             }
 
         }
