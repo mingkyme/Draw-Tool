@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Draw_Tool"
         xmlns:custom="clr-namespace:Draw_Tool.Custom"
         mc:Ignorable="d"
+        WindowStyle="ToolWindow"
         Title="Draw-Tool" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
