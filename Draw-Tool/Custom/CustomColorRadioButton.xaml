@@ -8,15 +8,19 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <RadioButton.Template>
         <ControlTemplate>
-            <Grid>
-                <ToggleButton IsChecked="{Binding IsChecked,RelativeSource={RelativeSource TemplatedParent}}"/>
-                <Grid>
+            <Grid Margin="1">
+                <ToggleButton IsChecked="{Binding IsChecked,RelativeSource={RelativeSource TemplatedParent}}" Background="#FEFEFE" BorderBrush="#101010" BorderThickness="1"/>
+                <Grid Background="Transparent">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
-                    <Ellipse Width="200" Height="200" Fill="{Binding InkColor,RelativeSource={RelativeSource TemplatedParent}}"/>
-                    <TextBlock Grid.Row="1" Text="RED" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{Binding InkColor,RelativeSource={RelativeSource TemplatedParent}}"/>
+                    <Ellipse Width="10" Height="10">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{Binding Color, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock Grid.Row="1" Text="{Binding ColorName, RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
             </Grid>
         </ControlTemplate>
