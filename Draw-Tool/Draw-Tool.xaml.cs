@@ -32,7 +32,7 @@ namespace Draw_Tool
 
         private void ColorRadioButton_Click(object sender, RoutedEventArgs e)
         {
-            XAML_Ink.DefaultDrawingAttributes.Color = (sender as Custom.CustomColorRadioButton).InkColor;
+            XAML_Ink.DefaultDrawingAttributes.Color = (sender as Custom.CustomColorRadioButton).Color;
         }
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

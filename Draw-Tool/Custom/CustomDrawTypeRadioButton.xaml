@@ -10,9 +10,7 @@
     <RadioButton.Template>
         <ControlTemplate>
             <Grid Margin="1">
-                <ToggleButton x:Name="XAML_Toggle" Background="#FEFEFE" BorderBrush="#101010" BorderThickness="1" IsChecked="{Binding IsChecked,RelativeSource={RelativeSource TemplatedParent}}">
-
-                </ToggleButton>
+                <ToggleButton IsChecked="{Binding IsChecked,RelativeSource={RelativeSource TemplatedParent}}" Background="#FEFEFE" BorderBrush="#101010" BorderThickness="1" />
                 <Grid x:Name="XAML_Grid" Background="Transparent">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="2*"/>

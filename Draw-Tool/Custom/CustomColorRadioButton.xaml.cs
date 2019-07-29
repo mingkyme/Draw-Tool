@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,17 +19,32 @@ namespace Draw_Tool.Custom
 {
     public partial class CustomColorRadioButton : RadioButton, INotifyPropertyChanged
     {
-        private Color inkColor;
-        public Color InkColor
+        private Color color;
+        public Color Color
         {
             get
             {
-                return inkColor;
+                return color;
             }
             set
             {
-                inkColor = value;
-                OnPropertyChanged(nameof(InkColor));
+                color = value;
+                PropertyInfo colorProperty = typeof(Colors).GetProperties().FirstOrDefault(p => Color.AreClose((Color)p.GetValue(null), color));
+                ColorName = colorProperty != null ? colorProperty.Name : "";
+                OnPropertyChanged(nameof(Color));
+            }
+        }
+        private string colorName;
+        public string ColorName
+        {
+            get
+            {
+                return colorName;
+            }
+            set
+            {
+                colorName = value;
+                OnPropertyChanged(nameof(ColorName));
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;
